@@ -18,13 +18,14 @@
                         <br/><br/><br/>
                         <h6>Enter your email ID to get an invite</h6>
                     </div>
-                    <div id="form" style="margin-left:80px">
+                    <div id="email-form" style="margin-left:80px" action="" method="POST" target="no-target">
                         <form name="contact" id="contact" method="post" action="">
                         <div>
                             <div>
-                                <input name="email" placeholder="Email address..." required="required" style="height:55px; width:380px; margin-right:2px; padding-left:10px; font-size:20px; border: 0px solid #FFFFFF; border-radius: 8px; box-shadow: 3px 3px 3px #C0C0C0" type="email" align="right">
+                                <input id="email" name="email" placeholder="Email address..." required="required" style="height:55px; width:380px; margin-right:2px; padding-left:10px; font-size:20px; border: 0px solid #FFFFFF; border-radius: 8px; box-shadow: 3px 3px 3px #C0C0C0" type="email" align="right">
                             </div>
-                            <div style="width:50px; margin-left:338px; margin-top:-43px"><button style="background-color:#FFFFFF; border:hidden; width:35px; outline-style:none; outline-width:0;"><img src="images/submit.png" style="margin:0px 18px 0 0px;" height="26" width="26"></button>
+                            <div style="width:50px; margin-left:338px; margin-top:-43px"><button id="email-submit" type="submit" style="background-color:#FFFFFF; border:hidden; width:35px; outline-style:none; outline-width:0;"><img src="images/submit.png" style="margin:0px 18px 0 0px;" height="26" width="26"></button>
+                            <iframe src="#" id="no-target" name="no-target"></iframe>
                             </div>
                         </div>
                     </div>
@@ -39,4 +40,21 @@
             </tr>
         </table>
     </body>
+    <script>
+
+    $('#email-form').one('submit',function(){
+        var emailAddress = encodeURIComponent($('#email').val());
+        var baseURL = 'https://docs.google.com/forms/d/1I7dZ0d3r78eri33wuNotFh3hbRKkb992NkcDnJkPdlQ/formResponse';
+        var submitRef = '&submit=submit';
+        var submitURL = (baseURL + emailAddress + submitRef);
+        $(this)[0].action=submitURL;
+        $('#email').addClass('active').val('Thank You! You will receive your invite shortly.');
+        setTimeout(function(){
+            $('#form-container').hide();
+            $('#update-form').animate({'width': '0px'},300,function(){
+                $('#get-updates-link').hide();
+            });
+        },1000);
+
+    </script>
 </html>
