@@ -30,6 +30,9 @@
                             </div>
                         </div>
                     </div>
+                    <div style="width: 100%; display: block; float: right; padding-top: 15px;">
+                        <div class="requestSubmited" style="display:none; text-align: center;">Your request has been sent!</div>
+                    </div>
                 </td>
             </tr>
             <tr>
@@ -59,14 +62,14 @@
 
 
 
-        function validateEmail(email) {
+        /*function validateEmail(email) {
             var re = /^(([^<>()[\]\\.,;:\s@\"]+(\.[^<>()[\]\\.,;:\s@\"]+)*)|(\".+\"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/;
             return re.test(email);
-            }
+        }*/
         function postContactToGoogle(){
             var email = $j('#email').val();
 
-            if ((email !== "") && (validateEmail(email)))) {
+            if (email !== "")  {
                 $j.ajax({
                     url: "https://docs.google.com/forms/d/1I7dZ0d3r78eri33wuNotFh3hbRKkb992NkcDnJkPdlQ/formResponse",
                     data: {"entry.1" : email},
