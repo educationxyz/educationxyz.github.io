@@ -6,7 +6,7 @@
         <table align="center" width="70%" border="0" style="font-family: 'Roboto', sans-serif; font-size:24px; margin-top:60px;">
             <tr>
                 <td>
-                    <div id="wireframe" style="margin-top:0px">
+                    <div id="wireframe" style="margin-top:-50px">
                         <img src="images/eduxyz.jpg" align="middle" height="700px" width="400px"/>
                     </div>
                 </td>
@@ -20,19 +20,21 @@
                     </div>
                     <div id="email-div" style="margin-left:80px">
                         <!--<form name="contact" id="contact" method="post" action="">-->
-                        <form id="email-form" target="_self" onsubmit="" action="javascript: postContactToGoogle()">
+                        <!--<form id="email-form" target="_self" onsubmit="" action="javascript: postContactToGoogle()">-->
+                        <form  id="form" method="get" action="https://script.google.com/macros/s/AKfycbxeKTVlTkqSGLIRphBrzACjuWlfmejbPIG7NqBxx-7Us7lnqLw/exec" accept-charset="UTF-8">
                         <div>
                             <div>
-                                <input id="email" name="email" placeholder="Email address..." required="required" style="height:55px; width:380px; margin-right:2px; padding-left:10px; font-size:20px; border: 0px solid #FFFFFF; border-radius: 8px; box-shadow: 3px 3px 3px #C0C0C0" type="email" align="right">
+                                <input type="text" id="email" name="email" placeholder="Email address..." required="required" style="height:55px; width:380px; margin-right:2px; padding-left:10px; font-size:20px; border: 0px solid #FFFFFF; border-radius: 8px; box-shadow: 3px 3px 3px #C0C0C0" type="email" align="right">
                             </div>
                             <div style="width:50px; margin-left:340px; margin-top:-50px"><button id="email-submit" type="submit" style="background-color:#FFFFFF; border:hidden; width:35px; outline-style:none; outline-width:0;"><img src="images/submit.png" style="margin:0px 18px 0 0px;" height="26" width="26"></button>
                             <!--<iframe src="#" id="no-target" name="no-target"></iframe>-->
                             </div>
                         </div>
+                    </form>
                     </div>
-                    <div style="width: 100%; display: block; float: right; padding-top: 15px;">
+                    <!--<div style="width: 100%; display: block; float: right; padding-top: 15px;">
                         <div class="requestSubmited" style="display:none; text-align: center;">Your request has been sent!</div>
-                    </div>
+                    </div>-->
                 </td>
             </tr>
             <tr>
@@ -44,7 +46,7 @@
             </tr>
         </table>
     </body>
-    <script>
+    <!--<script>
 
     /*$('#email-form').one('submit',function(){
         var emailAddress = encodeURIComponent($('#email').val());
@@ -95,5 +97,5 @@
             }
         }
 
-    </script>
+    </script>-->
 </html>
