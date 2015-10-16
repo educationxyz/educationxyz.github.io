@@ -1,0 +1,96 @@
+<html>
+    <head>
+        <title>educationXYZ | Home</title>
+    </head>
+    <body>
+        <table align="center" width="70%" border="0" style="font-family: 'Roboto', sans-serif; font-size:24px; margin-top:60px;">
+            <tr>
+                <td>
+                    <div id="wireframe" style="margin-top:100px">
+                        <img src="images/eduxyz.jpg" align="middle" height="430px" width="270px"/>
+                    </div>
+                </td>
+                <td>
+                    <div id="description" style="margin-left:80px">
+                        <img src="images/logo.png"/>
+                        <br/><br/><br/><br/>
+                        Anybody with a <b>phone</b> and <b>internet access</b> can learn <b/>anything</b>.
+                        <br/><br/><br/>
+                        <h6>Enter your email ID to get an invite</h6>
+                    </div>
+                    <div id="email-div" style="margin-left:80px">
+                        <!--<form name="contact" id="contact" method="post" action="">-->
+                        <form id="email-form" target="_self" onsubmit="" action="javascript: postContactToGoogle()">
+                        <div>
+                            <div>
+                                <input id="email" name="email" placeholder="Email address..." required="required" style="height:55px; width:380px; margin-right:2px; padding-left:10px; font-size:20px; border: 0px solid #FFFFFF; border-radius: 8px; box-shadow: 3px 3px 3px #C0C0C0" type="email" align="right">
+                            </div>
+                            <div style="width:50px; margin-left:338px; margin-top:-43px"><button id="email-submit" type="submit" style="background-color:#FFFFFF; border:hidden; width:35px; outline-style:none; outline-width:0;"><img src="images/submit.png" style="margin:0px 18px 0 0px;" height="26" width="26"></button>
+                            <iframe src="#" id="no-target" name="no-target"></iframe>
+                            </div>
+                        </div>
+                    </div>
+                </td>
+            </tr>
+            <tr>
+
+                <td>&nbsp;</td>
+
+                <td>&nbsp;</td>
+
+            </tr>
+        </table>
+    </body>
+    <script>
+
+    /*$('#email-form').one('submit',function(){
+        var emailAddress = encodeURIComponent($('#email').val());
+        var baseURL = 'https://docs.google.com/forms/d/1I7dZ0d3r78eri33wuNotFh3hbRKkb992NkcDnJkPdlQ/formResponse';
+        var submitRef = '&submit=submit';
+        var submitURL = (baseURL + emailAddress + submitRef);
+        $(this)[0].action=submitURL;
+        $('#email').addClass('active').val('Thank You! You will receive your invite shortly.');
+        setTimeout(function(){
+            $('#form-container').hide();
+            $('#update-form').animate({'width': '0px'},300,function(){
+                $('#get-updates-link').hide();
+            });
+        },1000);*/
+
+
+
+        function validateEmail(email) {
+            var re = /^(([^<>()[\]\\.,;:\s@\"]+(\.[^<>()[\]\\.,;:\s@\"]+)*)|(\".+\"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/;
+            return re.test(email);
+            }
+        function postContactToGoogle(){
+            var email = $j('#email').val();
+
+            if ((email !== "") && (validateEmail(email)))) {
+                $j.ajax({
+                    url: "https://docs.google.com/forms/d/1I7dZ0d3r78eri33wuNotFh3hbRKkb992NkcDnJkPdlQ/formResponse",
+                    data: {"entry.1" : email},
+                    type: "POST",
+                    dataType: "xml",
+                    statusCode: {
+                        0: function (){
+                            $j('#email').val("");
+                            //Success message
+                            $('#email').addClass('active').val('Thank You! You will receive your invite shortly.');
+                        },
+                        200: function (){
+                            $j('#email').val("");
+                            //Success Message
+                            $('#email').addClass('active').val('Thank You! You will receive your invite shortly.');
+                        }
+                    }
+                });
+            }
+            else {
+                //Error message
+
+            }
+        }
+
+    </script>
+</html>
