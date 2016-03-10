@@ -1,0 +1,68 @@
+<section id ="about" style="height:100%;">
+	<p>We'll launch the app soon</p>
+	<p>
+	<img id="appscreen" align="center" src = "images/appscreens.gif"/>
+</section>
+<section id="contact">
+	<div id="profdesc">
+	</div>
+	<div id="contactform">
+		<!--<form action="https://docs.google.com/forms/d/1aiaNYUzwEgVtqSRv4DKXZfGor8Zu5p9_C4eoRjA7Irs/formResponse">-->
+		<form>
+		  <h1>Contact Us</h1>
+		  <!--<div class="row">
+			<input type="checkbox" name="fancy-checkbox" id="fancy-checkbox"/>
+			<label for="fancy-checkbox">Checkbox</label>
+		  </div>
+
+		  <div class="row">
+			<input type="radio" name="fancy-radio" id="fancy-radio-1"/>
+			<label for="fancy-radio-1">Radio</label>
+
+			<input type="radio" name="fancy-radio" id="fancy-radio-2"/>
+			<label for="fancy-radio-2">Radio</label>
+		  </div>-->
+
+		  <div class="row">
+			<input type="text" name="fancy-text" id="fancy-text" class="formname"/>
+			<label for="fancy-text">Name</label>
+		  </div>
+
+		  <div class="row">
+			<input type="text" name="fancy-text" id="fancy-text" class="formemail"/>
+			<label for="fancy-text">Email</label>
+		  </div>
+
+		  <div class="row">
+			<textarea name="fancy-textarea" id="fancy-textarea" class="formmessage"></textarea>
+			<label for="fancy-textarea">Message</label>
+		  </div>
+
+		  <button type="submit" name="submit" tabindex="0" onclick="postContactToGoogleSpreadSheet()">Submit</button>
+		</form>
+	</div>
+</section>
+</body>
+<script>
+    function postContactToGoogleSpreadsheet() {
+        var name = $('.formname').val();
+        var email = $('.formemail').val();
+        var message = $('.formmessage').val();
+
+            $.ajax({
+                url: "https://docs.google.com/forms/d/1aiaNYUzwEgVtqSRv4DKXZfGor8Zu5p9_C4eoRjA7Irs/formResponse",
+                data: { "entry_85541622": name,
+                "entry_1585696177": email, "entry_122614649": message },
+                type: "POST",
+                dataType: "xml",
+                statusCode: {
+                    0: function () {
+                        //window.location.replace("ThankYou.html");
+                    },
+                    200: function () {
+                        //window.location.replace("ThankYou.html");
+                    }
+                }
+            });
+    }
+</script>
