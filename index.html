@@ -1,250 +1,168 @@
-<!DOCTYPE HTML>
-<html>
-	<head>
-		<title>EducationXYZ | home</title>
-		<meta charset="utf-8" />
-		<meta name="viewport" content="width=device-width, initial-scale=1" />
-		<link rel="stylesheet" href="assets/css/main.css" />
-		<link rel="stylesheet" href="assets/css/sendbuttoncss.css" />
-		<link rel="stylesheet" href="assets/css/downloadbuttoncss.css" />
-		<link href='http://fonts.googleapis.com/css?family=Pacifico' rel='stylesheet' type='text/css'>
-	</head>
-	<body>
-
-		<!-- Header -->
-			<!--<header id="header">
-
-				<!-- Logo -->
-					<!--<h1 id="logo"><img src="images/logo.png" alt="EducationXYZ" style="height:20px;"/></h1>
-
-				<!-- Nav -->
-					<!--<nav id="nav">
-						<ul>
-							<li><a href="#intro">The why</a></li>
-							<li><a href="#one">What I Do</a></li>
-							<li><a href="#two">Who I Am</a></li>
-							<li><a href="#three">What I Do</a></li>
-							<li><a href="#four">Who I Am</a></li>
-							<li><a href="#professors">Professors Involved</a></li>
-							<li><a href="#contact">Say Hi!</a></li>
-						</ul>
-					</nav>
-
-			</header>-->
-
-		<!-- Intro -->
-			<section id="intro" class="main style1 dark fullscreen">
-				<!--<div class="content container 50%" style="float:left;">
-					<img src = "images/eduxyz.png" style="height:500px;"/>
-				</div>-->
-
-				<div class="content container" style="float:left;">
-
-					<header>
-						<h2 style="color:#283593;">educationXYZ</h2>
-					</header>
-					<p style="font-size:30px; color:#3F51B5;"><br/><b>Increasing the workforce of the universe</b><br/><br/><br/></p>
-					<footer>
-						<p style="font-size:25px; color:#4e342e;"><b>Coming Soon!</b></p><br/><br/><br/><br/><br/><br/>
-						<a href="#one" class="button style2 down">More</a>
-						<!--<ul class="download-button"><li class="download-button"><a href="#" class="round yellow">Download<span class="round"><b>Get it!</b></span></a></li></ul>-->
-					</footer>
+<link href='css/googlerobotofont.css' rel='stylesheet' type='text/css'>
+<link href='css/googlerobotofont2.css' rel='stylesheet' type='text/css'>
+<link href='css/googleopensansfont.css' rel='stylesheet' type='text/css'>
+<link rel="stylesheet" type="text/css" href="css/style.css">
+<!--<h1>Pure CSS Interactive Map</h1>
+<p class="description">This doesn&rsquo;t look great at small sizes &mdash; in the original, I have an alternate rule for displaying on mobile devices. <strong>Click the points to expand them.</strong></p>-->
+<section id="map">
+	<div class="homepagecontent">
+		<p style="font-family:comic-sans; font-size:1.7em;">These people defined our world</p>
+	</div>
+	<div class="distribution-map">
+		<!-- This was broken for a while because imgur :( -->
+		<!-- I don't trust this host. Image here if it goes down: http://i.imgur.com/M7aUkuS.png -->
+		<img src="images/world.png">
+		<!--In the original application, these points are injected with Javascript, but ideally, they'd be injected with a haml loop. Because I'm hardcoding content, I'm presenting this as prerendered HTML-->
+        <button class="map-point" style="top:78%;left:54%">
+			<div class="content"  style="background-image: url('images/elonmusk.jpg'); background-size: cover;">
+				<div class="centered-y">
+					<h2>Elon Musk</h2>
+					<p>Founder of Tesla, SpaceX, Paypal, SolarCity and Zip2</p>
 				</div>
-			</section>
-
-		<!-- One -->
-			<section id="one" class="main style2 right dark fullscreen">
-				<div class="content box style2">
-					<header>
-						<h2>The Why</h2>
-					</header>
-					<p>Education is the most important tool to increase the scope and scale of consciousness and lead humanity to a better future.
-					Humanity would not have advanced without transfer of knowledge through generations.
-					</p>
+			</div>
+		</button>
+		<button class="map-point" style="top:78%;left:31%">
+			<div class="content"  style="background-image: url('images/domingoliotta.jpg'); background-size: cover;">
+				<div class="centered-y">
+					<h2>Domingo Liotta</h2>
+					<p>Pioneer of Heart Surgery, Creator of Cardiac Prostheses and First Artificial Heart used in a human being</p>
 				</div>
-				<a href="#two" class="button style2 down anchored">Next</a>
-			</section>
+			</div>
+		</button>
 
-		<!-- Two -->
-			<section id="two" class="main style2 left dark fullscreen">
-				<div class="content box style2">
-					<header>
-						<h2>Classroom learning</h2>
-					</header>
-					<p>The current classroom model of education delivery fails at scale since it is difficult to provide sufficient
-						 quality teachers and resources. In India, there are 600 million people under the age of 25
-						who need these resources.</p>
+		<button class="map-point" style="top:32%;left:47.5%">
+			<div class="content"  style="background-image: url('images/alanturing.jpg'); background-size: cover;">
+				<div class="centered-y">
+					<h2>Alan Turing</h2>
+					<p>Father of Artificial Intelligence, inventor of Turing Machine, Decoded Enigma and shortened the world war by two years</p>
 				</div>
-				<a href="#three" class="button style2 down anchored">Next</a>
-			</section>
-
-		<!-- One -->
-			<section id="three" class="main style2 right dark fullscreen">
-				<div class="content box style2">
-					<header>
-						<h2>MOOCs</h2>
-					</header>
-					<p>Many universities were generous to contribute. MOOCs came to the rescue. It became possible for
-					students in the remote parts of the world to take courses by the best teachers of the world.</p>
-					</div>
-					<a href="#four" class="button style2 down anchored">Next</a>
-				</section>
-
-				<!-- Two -->
-				<section id="four" class="main style2 left dark fullscreen">
-					<div class="content box style2">
-						<header>
-							<h2>However,</h2>
-						</header>
-						<p>It is challenging to find the best course for your needs with so many courses available.
-						 Also, there is a need for a course independent discussion platform where people from different backgrounds
-						can bring different perspectives to the problems.</p>
-					</div>
-					<a href="#five" class="button style2 down anchored">Next</a>
-				</section>
-				<section id="five" class="main style2 right dark fullscreen">
-					<div class="content box style2">
-						<header>
-							<h2>What we do</h2>
-						</header>
-						<p>educationXYZ solves the problem of discovery and make learning a more fun and social experience with an
-						open discussion platform that makes acquiring knowledge fun.</p>
-					</div>
-					<a href="#work" class="button style2 down anchored">Next</a>
-				</section>
-
-		<!-- Work -->
-		<!--	<section id="work" class="main style3 primary">
-				<div class="content container">
-					<header>
-						<h2>My Work</h2>
-						<p>Lorem ipsum dolor sit amet et sapien sed elementum egestas dolore condimentum.
-						Fusce blandit ultrices sapien, in accumsan orci rhoncus eu. Sed sodales venenatis
-						arcu, id varius justo euismod in. Curabitur egestas consectetur magna vitae.</p>
-					</header>
-
-					<!-- Lightbox Gallery  -->
-		<!--				<div class="container 75% gallery">
-							<div class="row 0% images">
-								<div class="6u 12u(mobile)"><a href="images/fulls/01.jpg" class="image fit from-left"><img src="images/thumbs/01.jpg" title="The Anonymous Red" alt="" /></a></div>
-								<div class="6u 12u(mobile)"><a href="images/fulls/02.jpg" class="image fit from-right"><img src="images/thumbs/02.jpg" title="Airchitecture II" alt="" /></a></div>
-							</div>
-							<div class="row 0% images">
-								<div class="6u 12u(mobile)"><a href="images/fulls/03.jpg" class="image fit from-left"><img src="images/thumbs/03.jpg" title="Air Lounge" alt="" /></a></div>
-								<div class="6u 12u(mobile)"><a href="images/fulls/04.jpg" class="image fit from-right"><img src="images/thumbs/04.jpg" title="Carry on" alt="" /></a></div>
-							</div>
-							<div class="row 0% images">
-								<div class="6u 12u(mobile)"><a href="images/fulls/05.jpg" class="image fit from-left"><img src="images/thumbs/05.jpg" title="The sparkling shell" alt="" /></a></div>
-								<div class="6u 12u(mobile)"><a href="images/fulls/06.jpg" class="image fit from-right"><img src="images/thumbs/06.jpg" title="Bent IX" alt="" /></a></div>
-							</div>
-						</div>
-
+			</div>
+		</button>
+        <button class="map-point" style="top:32%;left:46%">
+			<div class="content"  style="background-image: url('images/stephenhawking.jpg'); background-size: cover;">
+				<div class="centered-y">
+					<h2>Stephen Hawking</h2>
+					<p>Theoritical physicist, cosmologist, Director of research at Centre for Theoretical Cosmology, Cambridge University</p>
 				</div>
-			</section>-->
-
-			<section id="professors" class="wrapper style1 special fade-up">
-				<div class="container">
-					<header class="major">
-						<h2>Professors Involved</h2>
-						<p>We are fortunate to have professors from IIT Delhi helping us in the mission.</p>
-					</header>
-					<div class="box alt">
-						<div class="row uniform">
-							<section class="4u 6u(medium) 12u$(xsmall)">
-								<span class="icon alt major"><img src="images/pvmrao.jpg" class= "imagecircular"/></span>
-								<h3>PVM Rao</h3>
-								<p>Mechanical Engineering department, IIT Delhi</p>
-							</section>
-							<section class="4u 6u(medium) 12u$(xsmall)">
-								<span class="icon alt major"><img src="images/rajeshkhanna.jpg" class= "imagecircular"/></span>
-								<h3>Rajesh Khanna</h3>
-								<p>Chemical Engineering department, IIT Delhi. Also, our official mentor</p>
-							</section>
-							<section class="4u 6u(medium) 12u$(xsmall)">
-								<span class="icon alt major"><img src="images/soringrama.jpg" class= "imagecircular"/></span>
-								<h3>Sorin Grama</h3>
-								<p>Humanities Department, IIT Delhi. Also, cofounder of Promethean Systems</p>
-							</section>
-						</div>
-					</div>
-					<center>Also, special thanks to Yashash Agarwal, CEO at <a href = "http://gamezop.co">Gamezop</a>.</center>
+			</div>
+		</button>
+        <button class="map-point" style="top:26%;left:54%">
+			<div class="content"  style="background-image: url('images/linustorvalds.jpg'); background-size: cover;">
+				<div class="centered-y">
+					<h2>Linus Torvlads</h2>
+					<p>Inventor of Linux and Git</p>
 				</div>
-			</section>
-		<!-- Contact -->
-			<section id="contact" class="main style3 secondary">
-				<div class="content container">
-					<header>
-						<h2>Say Hi.</h2>
-						<p>Contact us if you want to give feedback or contribute to the project. We can also chat about the new Star Wars movie.</p>
-					</header>
-					<div class="box container 75%">
-
-					<!-- Contact Form -->
-							<form method="post" action="#">
-								<div class="row 50%">
-									<div class="6u 12u(mobile)"><input type="text" name="name" placeholder="Name" /></div>
-									<div class="6u 12u(mobile)"><input type="email" name="email" placeholder="Email" /></div>
-								</div>
-								<div class="row 50%">
-									<div class="12u"><textarea name="message" placeholder="Message" rows="6"></textarea></div>
-								</div>
-								<div class="row">
-									<div class="12u">
-										<!--<ul class="actions">-->
-											<button id="send-button" type="button">
-												<p>Send</p>
-												<svg version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" viewBox="0 0 512 512" enable-background="new 0 0 512 512" xml:space="preserve">
-													<path id="paper-plane-icon" d="M462,54.955L355.371,437.187l-135.92-128.842L353.388,167l-179.53,124.074L50,260.973L462,54.955z
-													M202.992,332.528v124.517l58.738-67.927L202.992,332.528z"></path>
-												</svg>
-											</button>
-										<!--</ul>-->
-									</div>
-								</div>
-							</form>
-
-					</div>
+			</div>
+		</button>
+        <button class="map-point" style="top:28%;left:61%">
+			<div class="content"  style="background-image: url('images/sergeybrin.jpg'); background-size: cover;">
+				<div class="centered-y">
+					<h2>Sergey Brin</h2>
+					<p>Cofounder at Google</p>
 				</div>
-			</section>
-
-		<!-- Footer -->
-			<!--<footer id="footer">-->
-
-				<!-- Icons -->
-					<!--<ul class="actions">
-						<li><a href="#" class="icon fa-twitter"><span class="label">Twitter</span></a></li>
-						<li><a href="#" class="icon fa-facebook"><span class="label">Facebook</span></a></li>
-						<li><a href="#" class="icon fa-google-plus"><span class="label">Google+</span></a></li>
-						<li><a href="#" class="icon fa-dribbble"><span class="label">Dribbble</span></a></li>
-						<li><a href="#" class="icon fa-pinterest"><span class="label">Pinterest</span></a></li>
-						<li><a href="#" class="icon fa-instagram"><span class="label">Instagram</span></a></li>
-					</ul>-->
-
-				<!-- Menu -->
-					<!--<ul class="menu">
-						<li>&copy; Untitled</li><li>Design: <a href="http://html5up.net">HTML5 UP</a></li>
-					</ul>-->
-
-			<!--</footer>-->
-
-		<!-- Scripts -->
-
-			<script src="assets/js/jquery.min.js"></script>
-			<script src="assets/js/jquery.poptrox.min.js"></script>
-			<script src="assets/js/jquery.scrolly.min.js"></script>
-			<script src="assets/js/jquery.scrollex.min.js"></script>
-			<script src="assets/js/skel.min.js"></script>
-			<script src="assets/js/util.js"></script>
-			<!--[if lte IE 8]><script src="assets/js/ie/respond.min.js"></script><![endif]-->
-			<script src="assets/js/main.js"></script>
-			<script>
-				$('button#send-button').click(function() {
-					$(this).toggleClass('clicked');
-					$('button#send-button p').text(function(i, text) {
-						return text === "Sent!" ? "Send" : "Sent!";
-					});
-				});
-			</script>
-
-	</body>
-</html>
+			</div>
+		</button>
+		<!--<button class="map-point" style="top:76%;left:82.5%">
+			<div class="content">
+				<div class="centered-y">
+					<h2>3</h2>
+					<p>Bakchodi</p>
+				</div>
+			</div>
+		</button>-->
+		<button class="map-point" style="top:39%;left:14%">
+			<div class="content"  style="background-image: url('images/stevejobs.jpg'); background-size: cover;">
+				<div class="centered-y">
+					<h2>Steve Jobs</h2>
+					<p>Founder of Apple Inc, Pixar Animation Studios and NeXT Inc. Also, known as the Father of the Digital World</p>
+				</div>
+			</div>
+		</button>
+        <button class="map-point" style="top:36%;left:30%">
+			<div class="content"  style="background-image: url('images/alberteinstein.jpg'); background-size: cover;">
+				<div class="centered-y">
+					<h2>Albert Einstein</h2>
+					<p>Special and General Theory of Relativity, Photoelectric Effect. Also known as the Father of Modern Physics</p>
+				</div>
+			</div>
+		</button>
+        <!--<button class="map-point" style="top:37%;left:25%">
+			<div class="content">
+				<div class="centered-y">
+					<h2>Sunita Williams</h2>
+					<p>Bakchodi</p>
+				</div>
+			</div>
+		</button>-->
+		<button class="map-point" style="top:40%;left:25%">
+			<div class="content"  style="background-image: url('images/thomasedison.jpg'); background-size: cover;">
+				<div class="centered-y">
+					<h2>Thomas Edison</h2>
+					<p>Held 1093 patents. Enough Said!</p>
+				</div>
+			</div>
+		</button>
+        <button class="map-point" style="top:32%;left:13%">
+			<div class="content"  style="background-image: url('images/billgates.jpg'); background-size: cover;">
+				<div class="centered-y">
+					<h2>Bill Gates</h2>
+					<p>Cofounder at Microsoft and Bill &amp; Melinda Gates Foundation</p>
+				</div>
+			</div>
+		</button>
+		<button class="map-point" style="top:40%;left:50%">
+			<div class="content"  style="background-image: url('images/leonardodavinci.jpg'); background-size: cover;">
+				<div class="centered-y">
+					<h2>Leonardo Da Vinci</h2>
+					<p>Polymath, Architect, Mathematician, Musician, Painter, Sculptor, Engineer, Inventor, Anatomist and Writer</p>
+				</div>
+			</div>
+		</button>
+		<button class="map-point" style="top:39%;left:51%">
+			<div class="content"  style="background-image: url('images/nikolatesla.jpg'); background-size: cover;">
+				<div class="centered-y">
+					<h2>Nikola Tesla</h2>
+					<p>Alternating Current, Light, X-Rays, Radio, Remote Control, Electric Motor, Robotics, Laser, Wireless Communications and Wireless transmission of energy</p>
+				</div>
+			</div>
+		</button>
+		<button class="map-point" style="top:58%;left:68%">
+			<div class="content"  style="background-image: url('images/apjabdulkalam.jpg'); background-size: cover;">
+				<div class="centered-y">
+					<h2>APJ Abdul Kalam</h2>
+					<p>Former president of India, SLV-III (India's First indigenious satellite launch vehicle), led India's missile program, Co-inventor of Kalam-Raju Tablet. Also known as the missile man of India.</p>
+				</div>
+			</div>
+		</button>
+		<!--<button class="map-point" style="top:52.5%;left:67%">
+			<div class="content">
+				<div class="centered-y">
+					<h2>Narendra Modi</h2>
+					<p>Bakchodi</p>
+				</div>
+			</div>
+		</button>-->
+		<button class="map-point" style="top:51.5%;left:70.2%">
+			<div class="content"  style="background-image: url('images/swamivivekananda.jpg'); background-size: cover;">
+				<div class="centered-y">
+					<h2>Swami Vivekananda</h2>
+					<p>Liberisation of Hinduism, Rationalism to Indians, Spread hinduism to other countries, Helped set up IISC</p>
+				</div>
+			</div>
+		</button>
+		<!--<button class="map-point" style="top:25%;left:70%">
+			<!--<div class="content" style="background-image: url(images/appscreens.gif);">-->
+			<!--<div class="content">
+				<div class="centered-y">
+					<h2>6</h2>
+					<p>Bakchodi</p>
+				</div>
+			</div>
+		</button>-->
+	</div>
+	<!--<p class="description">It&rsquo;s been brought to my attention that OSX/Safari doesn&rsquo;t support :active for buttons with default settings, so you guys will have to resort to JS or hold down your mouse button to keep :focus triggered.</p>-->
+	<div class="homepagecontent">
+		<p style="font-family:comic-sans; font-size:2em;">If we make education democratic, we will have many such visionaries who will redefine our world.</p>
+	</div>
+</section>
+</body>
